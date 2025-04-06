@@ -29,24 +29,19 @@ public class ChatPontoAPonto {
                 Socket conexao = new Socket(ip, outraPorta);
                 System.out.println("Conectado ao cliente em " + ip + ":" + outraPorta);
 
-                // Envio
                 Thread envio = new Thread(() -> gerenciarEnvio(conexao, nome));
                 envio.start();
 
-                // Recebimento
                 Thread recebimento = new Thread(() -> gerenciarRecebimento(conexao));
                 recebimento.start();
             }
 
-            // Sempre escuta conexões
             Socket cliente = servidor.accept();
             System.out.println("Cliente conectado!");
 
-            // Envio
             Thread envio = new Thread(() -> gerenciarEnvio(cliente, nome));
             envio.start();
 
-            // Recebimento
             Thread recebimento = new Thread(() -> gerenciarRecebimento(cliente));
             recebimento.start();
 
@@ -88,6 +83,5 @@ public class ChatPontoAPonto {
             System.out.println("Erro ao receber mensagem: " + e.getMessage());
         }
     }
-
 }
 
