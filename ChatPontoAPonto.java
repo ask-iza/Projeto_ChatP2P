@@ -54,3 +54,21 @@ public class ChatPontoAPonto {
             System.out.println("Erro ao escutar conexões: " + e.getMessage());
         }
     }
+
+    public static void gerenciarEnvio(Socket conexao, String nome) {
+        try {
+            PrintWriter escritor = new PrintWriter(conexao.getOutputStream(), true);
+            Scanner teclado = new Scanner(System.in);
+
+            while (true) {
+                String msg = teclado.nextLine();
+                escritor.println(nome + ": " + msg);
+            }
+
+        } catch (IOException e) {
+            System.out.println("Erro ao enviar mensagem: " + e.getMessage());
+        }
+    }   
+
+}
+
