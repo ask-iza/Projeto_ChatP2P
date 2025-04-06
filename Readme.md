@@ -31,3 +31,4 @@ Projeto simples de terminal em Java que permite a comunicação entre dois usuá
 ### 1. Compile:
 ```bash
 javac ChatPontoAPonto.java
+java ChatPontoAPonto
