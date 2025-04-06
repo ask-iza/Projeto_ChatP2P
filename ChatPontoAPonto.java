@@ -68,7 +68,26 @@ public class ChatPontoAPonto {
         } catch (IOException e) {
             System.out.println("Erro ao enviar mensagem: " + e.getMessage());
         }
-    }   
+    }  
+    
+    public static void gerenciarRecebimento(Socket conexao) {
+        try {
+            Scanner entrada = new Scanner(conexao.getInputStream());
+
+            while (true) {
+                if (entrada.hasNextLine()) {
+                    String msgRecebida = entrada.nextLine();
+                    System.out.println(msgRecebida);
+                } else {
+                    System.out.println("Outro Cliente desconectado.");
+                    break;
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.println("Erro ao receber mensagem: " + e.getMessage());
+        }
+    }
 
 }
 
