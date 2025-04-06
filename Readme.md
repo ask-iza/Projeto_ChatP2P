@@ -1,6 +1,4 @@
 
-markdown
-Copiar código
 # 💬 Chat Ponto-a-Ponto em Java
 
 Projeto simples de terminal em Java que permite a comunicação entre dois usuários conectados via rede (ponto-a-ponto), usando sockets e threads para envio e recebimento de mensagens simultaneamente.
