@@ -28,5 +28,12 @@ Projeto simples de terminal em Java que permite a comunicação entre dois usuá
 
 ### 1. Compile:
 ```bash
-javac ChatPontoAPonto.java
-java ChatPontoAPonto
+java -jar ProjetoP2P_02.jar
+```
+### 2. Passo a Passo:
+
+1. Abra o terminal (ou cmd no Windows).
+2. Vá até a pasta onde está o arquivo .jar:
+
+```bash
+cd caminho/para/sua/pasta
